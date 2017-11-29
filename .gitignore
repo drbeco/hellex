@@ -1,0 +1,4 @@
+# Ignore backups and vi swap
+.*
+*~
+

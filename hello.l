@@ -5,8 +5,6 @@
 
 %}
   
- /* %option bison-bridge */
-
 %%
 
 ("hi"|"oi")"\n"       { return HI;  }
@@ -30,7 +28,6 @@ int yywrap(void)
 int yyerror(char *errormsg)
 {
       fprintf(stderr, "%s\n", errormsg);
-      /* printf("Error\n"); */
       exit(1);
 }
 

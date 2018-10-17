@@ -2,12 +2,12 @@
 
   #include "y.tab.h"
   int yyerror(char *errormsg);
-
+  int yyparse();
 %}
   
 %%
 
-("hi"|"oi")"\n"       { return HI;  }
+("hi"|"oi")"\t"       { return HI;  }
 ("tchau"|"bye")"\n"   { return BYE; }
 [-[]+.,><]            { return yytext[0]; }
 .                     { yyerror("Unknow char");  }

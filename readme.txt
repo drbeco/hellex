@@ -2,13 +2,12 @@ Read me TXT
 
 http://stackoverflow.com/questions/5456011/how-to-compile-lex-yacc-files-on-windows/5545924#5545924
 
-As for today (2011-04-05) you will need the lastest versions of:
+As for today (2018-10-19) you will need the lastest versions of:
 
-    flex-2.5.4a-1.exe 
-(http://gnuwin32.sourceforge.net/packages/flex.htm)
-
-    bison-2.4.1-setup.exe
-(http://gnuwin32.sourceforge.net/packages/bison.htm)
+* flex-2.5.4a-1.exe (http://gnuwin32.sourceforge.net/packages/flex.htm)
+* flex version 2.6.4 (linux opensuse)
+* bison-2.4.1-setup.exe (http://gnuwin32.sourceforge.net/packages/bison.htm)
+* bison version 3.0.4 (linux opensuse)
 
     After that, do a full install in a directory of your preference (default to C:\Program Files (x86)\GnuWin32). 
 I suggest C:\GnuWin32 , because here bison had some problems with spaces in directory names.

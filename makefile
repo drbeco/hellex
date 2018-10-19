@@ -6,7 +6,7 @@
 # of a very small program for a 
 # hellow world example
 
-CC = gcc
+CC = gcc -L/usr/local/opt/flex/lib
 LIB = -lfl
 o ?= hello
 
@@ -18,6 +18,8 @@ bison: y.tab.c
 
 yacc: bison
 
+#$(o).l: y.tab.h
+
 lex.yy.c: $(o).l
 	flex $(o).l 
 	
@@ -27,7 +29,7 @@ y.tab.c: $(o).y
 y.tab.h: $(o).y
 
 $(o).x: lex.yy.c y.tab.c y.tab.h
-	gcc lex.yy.c y.tab.c -o $(o).x $(LIB)
+	$(CC) lex.yy.c y.tab.c -o $(o).x $(LIB)
 
 clean:
 	rm -rf lex.yy.c

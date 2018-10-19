@@ -2,7 +2,7 @@
 
   #include "y.tab.h"
   int yyerror(char *errormsg);
-
+  int yyparse();
 %}
   
 %%
